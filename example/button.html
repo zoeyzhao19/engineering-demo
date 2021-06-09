@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button</title>
+  <script src="../node_modules/vue/dist/vue.global.js"></script>
+  <script src="../dist/element3-ui.global.js"></script>
+  <link href="../lib/theme-chalk/button.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const { createApp, reactive, computed, watchEffect } = Vue
+    const { ElButton } = Element3
+
+    const MyComponent = {
+      template: `<el-button icon="el-icon-search" @click="click">{{state.message }}</el-button>`,
+      setup () {
+        const state = reactive({
+          message: 'Hello Vue 3!!'
+        })
+        watchEffect(() => {
+          console.log('state change', state.message)
+        })
+        function click() {
+          state.message = state.message.split("").reverse().join("")
+        }
+        return {
+          state,
+          click
+        }
+      }
+    }
+    createApp(MyComponent).use(Element3).mount("#app")
+
+  </script>
+</body>
+</html>

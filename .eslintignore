@@ -1,0 +1,12 @@
+examples/play
+*.sh
+node_modules
+lib
+coverage
+*.md
+*.scss
+*.woff
+*.ttf
+*.html
+__tests__
+dist
