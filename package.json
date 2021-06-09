@@ -10,7 +10,8 @@
     "build:theme": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "build:next": "rollup -c",
     "test": "jest --runInBand",
-    "test:coverage": "jest --runInBand cross-env BABEL_ENV=test"
+    "test:coverage": "jest --runInBand cross-env BABEL_ENV=test",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
