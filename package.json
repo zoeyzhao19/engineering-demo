@@ -6,7 +6,7 @@
   "scripts": {
     "rollup": "rollup -c",
     "lint": "eslint --ext .js --ext .vue src/ packages/",
-    "lint-fix": "eslint  --no-error-on-unmatched-pattern --fix --ext .js --ext .vue src/ packages/",
+    "lint-fix": "eslint --no-error-on-unmatched-pattern --fix --ext .js --ext .vue src/ packages/",
     "build:theme": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "build:next": "rollup -c",
     "test": "jest --runInBand",
@@ -57,12 +57,5 @@
     "tslib": "^2.2.0",
     "vue": "^3.0.11",
     "vue-jest": "5.0.0-alpha.10"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "commit-msg": "node script/verify-commit.js",
-      "pre-push": "npm test"
-    }
   }
 }

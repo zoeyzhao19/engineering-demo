@@ -24,7 +24,7 @@
 </template>
 <script>
 import { computed, inject, toRefs, unref, getCurrentInstance } from 'vue'
-export default {
+export default{
   name: 'ElButton',
   props: {
     type: {
