@@ -154,5 +154,5 @@ it("native-type", () => {
       nativeType: "button"
     }
   })
-  expect(wrapper.attributes("type")).toBe("button")
+  expect(wrapper.attributes("type")).toBe("butto")
 })
