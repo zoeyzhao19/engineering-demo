@@ -24,8 +24,8 @@
 </template>
 <script>
 import { computed, inject, toRefs, unref, getCurrentInstance } from 'vue'
-export default{
-  name: 'ElButton',
+export default {
+  name:'ElButton',
   props: {
     type: {
       type: String,
