@@ -28,8 +28,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
       with: 
-      node-version: 12.x
-      registry-url: 'https://registry.npm.taobao.org/'
+        node-version: 12.x
+        registry-url: 'https://registry.npm.taobao.org/'
       - name: Cache node_modules
         uses: actions/cache@v2
         with:
