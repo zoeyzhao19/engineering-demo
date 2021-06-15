@@ -9,8 +9,8 @@
     "lint-fix": "eslint --no-error-on-unmatched-pattern --fix --ext .js --ext .vue src/ packages/",
     "build:theme": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "build:next": "rollup -c",
-    "test": "jest --runInBand --coverage",
-    "test:coverage": "jest --runInBand cross-env BABEL_ENV=test",
+    "test": "jest --runInBand",
+    "test:coverage": "jest --runInBand --coverage",
     "prepare": "husky install"
   },
   "author": "",
